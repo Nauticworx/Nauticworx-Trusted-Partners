@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Nauticworx Partner Map</title>
 <style>html,body{margin:0;padding:0;background:#ffffff;}</style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LG8CBXS558"></script>
@@ -2621,6 +2621,192 @@ body.page-id-15425 .entry-content > *:first-child {
   #nwx-partner-map-v3 .nwx-map-zoom-controls {
     right: 10px;
     bottom: 10px;
+  }
+}
+
+
+/* Remove leftover spacing between the search/filter area and partner cards. */
+#nwx-partner-map-v3 .nwx-sidebar-panel .nwx-filter-bar {
+  margin-bottom: 0 !important;
+}
+
+#nwx-partner-map-v3 .nwx-testimonial-section,
+#nwx-partner-map-v3 .nwx-sidebar-panel .nwx-testimonial-section,
+#nwx-partner-map-v3 .nwx-sidebar-panel .nwx-testimonial-grid {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+#nwx-partner-map-v3 .nwx-testimonial-header {
+  display: none !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+@media (max-width: 760px) {
+  #nwx-partner-map-v3 .nwx-sidebar-panel .nwx-filter-bar {
+    padding-bottom: 0 !important;
+  }
+
+  #nwx-partner-map-v3 .nwx-mobile-view-tabs {
+    margin-top: 0 !important;
+  }
+
+  #nwx-partner-map-v3 .nwx-testimonial-section {
+    margin-top: 0 !important;
+  }
+}
+
+
+/* ==========================================================================
+   CORRECTED OPTION B MOBILE
+   ========================================================================== */
+
+@media (max-width: 760px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  #nwx-partner-map-v3 {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* The mobile layout always shows the complete filter set. */
+  #nwx-partner-map-v3 .nwx-mobile-filter-tab,
+  #nwx-partner-map-v3 .nwx-mobile-filter-chevron {
+    display: none !important;
+  }
+
+  #nwx-partner-map-v3 .nwx-sidebar-panel .nwx-filter-bar,
+  #nwx-partner-map-v3 .nwx-filter-bar,
+  #nwx-partner-map-v3.nwx-mobile-filters-open .nwx-filter-bar {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+    margin: 0 !important;
+    padding: 10px 0 8px !important;
+  }
+
+  #nwx-partner-map-v3 .nwx-search-group,
+  #nwx-partner-map-v3 .nwx-category-group,
+  #nwx-partner-map-v3 .nwx-compact-filter-group,
+  #nwx-partner-map-v3 .nwx-filter-label,
+  #nwx-partner-map-v3 .nwx-keyword-wrap,
+  #nwx-partner-map-v3 .nwx-typeahead-wrap {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  #nwx-partner-map-v3 .nwx-filter-group-heading,
+  #nwx-partner-map-v3 .nwx-visually-hidden {
+    position: static !important;
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 0 5px !important;
+    padding: 0 !important;
+    clip: auto !important;
+    overflow: visible !important;
+    white-space: normal !important;
+    color: var(--nwx-dark) !important;
+    font-size: 14px !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+  }
+
+  #nwx-partner-map-v3 .nwx-search-group .nwx-filter-group-heading,
+  #nwx-partner-map-v3 .nwx-category-group .nwx-filter-group-heading {
+    font-size: 18px !important;
+  }
+
+  /* iOS Safari auto-zooms fields smaller than 16px. */
+  #nwx-partner-map-v3 input,
+  #nwx-partner-map-v3 select,
+  #nwx-partner-map-v3 textarea,
+  #nwx-partner-map-v3 .nwx-filter-input {
+    font-size: 16px !important;
+  }
+
+  #nwx-partner-map-v3 .nwx-filter-input {
+    display: block !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 48px !important;
+    height: 48px !important;
+    padding: 10px 12px !important;
+    border: 1px solid #cfd7de !important;
+    border-radius: 8px !important;
+    background: #fff !important;
+  }
+
+  #nwx-partner-map-v3 .nwx-clear-filters-wrap {
+    display: flex !important;
+    width: 100% !important;
+    justify-content: flex-end !important;
+    margin: 0 !important;
+  }
+
+  #nwx-partner-map-v3 .nwx-mobile-view-tabs {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    width: 100% !important;
+    margin: 0 0 10px !important;
+    background: #fff;
+    border-top: 1px solid #d9e2ea;
+    border-bottom: 1px solid #d9e2ea;
+    position: static !important;
+  }
+
+  #nwx-partner-map-v3 .nwx-mobile-view-tab {
+    min-height: 46px !important;
+    font-size: 16px !important;
+  }
+
+  #nwx-partner-map-v3 .nwx-testimonial-section,
+  #nwx-partner-map-v3 .nwx-map-canvas-column {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  #nwx-partner-map-v3 .nwx-map-canvas-column,
+  #nwx-partner-map-v3 .nwx-map-module,
+  #nwx-partner-map-v3 .nwx-map-stage,
+  #nwx-partner-map-v3 .nwx-map-content,
+  #nwx-partner-map-v3 .nwx-svg-map-wrap {
+    min-height: 420px !important;
+    height: 420px !important;
+  }
+
+  #nwx-partner-map-v3.nwx-mobile-view-list .nwx-map-canvas-column {
+    display: none !important;
+  }
+
+  #nwx-partner-map-v3.nwx-mobile-view-map .nwx-testimonial-section {
+    display: none !important;
+  }
+
+  #nwx-partner-map-v3.nwx-mobile-view-map .nwx-map-canvas-column {
+    display: block !important;
   }
 }
 
@@ -5246,21 +5432,6 @@ if (false && filterBar && !filterBar.querySelector(".nwx-filter-intro")) {
     }
   });
 
-  if (!filterBar.querySelector(".nwx-mobile-filter-tab")) {
-    mobileFilterTab = document.createElement("button");
-    mobileFilterTab.type = "button";
-    mobileFilterTab.className = "nwx-mobile-filter-tab";
-    mobileFilterTab.setAttribute("aria-expanded", "false");
-    mobileFilterTab.innerHTML = "Filters<span class=\"nwx-mobile-filter-chevron\">&#9662;</span>";
-
-    mobileFilterTab.addEventListener("click", function (event) {
-      event.stopPropagation();
-      var isOpen = root.classList.toggle("nwx-mobile-filters-open");
-      mobileFilterTab.setAttribute("aria-expanded", isOpen ? "true" : "false");
-    });
-
-    filterBar.insertBefore(mobileFilterTab, filterBar.firstChild);
-  }
 }
 
 /* Keep the reset control in its original .nwx-clear-filters-wrap
