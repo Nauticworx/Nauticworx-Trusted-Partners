@@ -2810,6 +2810,121 @@ body.page-id-15425 .entry-content > *:first-child {
   }
 }
 
+
+/* FINAL OPTION B MOBILE LAYOUT: filters remain in normal document flow. */
+@media (max-width: 760px) {
+  #nwx-partner-map-v3,
+  #nwx-partner-map-v3 .nwx-sidebar-layout,
+  #nwx-partner-map-v3 .nwx-sidebar-panel {
+    position: static !important;
+    transform: none !important;
+  }
+
+  #nwx-partner-map-v3 .nwx-sidebar-layout {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 0 !important;
+    overflow: visible !important;
+  }
+
+  #nwx-partner-map-v3 .nwx-sidebar-panel .nwx-filter-bar,
+  #nwx-partner-map-v3 .nwx-filter-bar {
+    position: static !important;
+    inset: auto !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    z-index: auto !important;
+    transform: none !important;
+    translate: none !important;
+    order: 1 !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 16px 24px 18px !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+    touch-action: auto !important;
+    cursor: default !important;
+  }
+
+  #nwx-partner-map-v3 .nwx-filter-drag-handle,
+  #nwx-partner-map-v3 .nwx-drag-handle,
+  #nwx-partner-map-v3 [data-drag-handle],
+  #nwx-partner-map-v3 .nwx-mobile-filter-tab,
+  #nwx-partner-map-v3 .nwx-mobile-filter-chevron {
+    display: none !important;
+    pointer-events: none !important;
+  }
+
+  #nwx-partner-map-v3 .nwx-mobile-view-tabs {
+    position: static !important;
+    inset: auto !important;
+    z-index: auto !important;
+    transform: none !important;
+    order: 2 !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  #nwx-partner-map-v3 .nwx-testimonial-section {
+    position: static !important;
+    z-index: auto !important;
+    transform: none !important;
+    order: 3 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 24px !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+  }
+
+  #nwx-partner-map-v3 .nwx-map-canvas-column {
+    position: static !important;
+    z-index: auto !important;
+    transform: none !important;
+    order: 3 !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  #nwx-partner-map-v3 .nwx-sidebar-panel .nwx-testimonial-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  #nwx-partner-map-v3 .nwx-featured-partner-card,
+  #nwx-partner-map-v3 .nwx-featured-partner-card .nwx-partner-card {
+    position: relative !important;
+    width: 100% !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
+
+  #nwx-partner-map-v3.nwx-mobile-view-list .nwx-map-canvas-column {
+    display: none !important;
+  }
+
+  #nwx-partner-map-v3.nwx-mobile-view-map .nwx-testimonial-section {
+    display: none !important;
+  }
+
+  #nwx-partner-map-v3.nwx-mobile-view-map .nwx-map-canvas-column {
+    display: block !important;
+  }
+}
+
 </style>
 
 
@@ -5507,7 +5622,7 @@ console.log("NWX consolidated map active");
       console.error("NWX consolidated map failed:", error);
     }
   }
- 
+
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", run);
   } else {
